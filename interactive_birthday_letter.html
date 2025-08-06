@@ -421,11 +421,9 @@
             const currentIndex = photoClickCount % descriptions.length;
             
             element.innerHTML = descriptions[currentIndex];
-            element.style.backgroundColor = getRandomColor();
-            element.style.color = 'white';
+            element.style.backgroundColor = `url('images/photo${photoNum}.jpg')`;
             element.style.fontSize = '1em';
             element.style.fontWeight = 'bold';
-            element.style.backgroundImage = 'none';
             photoClickCount++;
         }
 
