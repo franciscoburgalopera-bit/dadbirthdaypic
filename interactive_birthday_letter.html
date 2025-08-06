@@ -390,6 +390,7 @@
     </div>
 
     <script>
+        const PHOTO_EXT = '.jpeg';   // ← pon '.jpg', '.png', etc., según tus archivos
         let wishCount = 0;
         let photoClickCount = 0;
 
@@ -420,11 +421,13 @@
             const descriptions = photoDescriptions[photoNum];
             const currentIndex = photoClickCount % descriptions.length;
             
-            element.innerHTML = descriptions[currentIndex];
-            element.style.backgroundImage = `url('images/photo${photoNum}.jpg')`;
-            element.style.fontSize = '1em';
-            element.style.fontWeight = 'bold';
-            photoClickCount++;
+          element.innerHTML = descriptions[currentIndex];
+          element.style.backgroundImage =
+          `url('./images/photo${photoNum}${PHOTO_EXT}')`;
+          element.style.fontSize  = '1em';
+          element.style.fontWeight = 'bold';
+          photoClickCount++;
+
         }
 
         function makeWish() {
